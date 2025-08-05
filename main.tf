@@ -3,6 +3,11 @@ resource "azurerm_resource_group" "Rg1" {
     location = "eastus"
 }
 
+reosource "azurerm_ressoucre_group" "Rg2" {
+    name                  = "fan2"
+    location              = "eastus"
+}
+
 resource "azurerm_storage_account" "Stg1" {
     depends_on = [azurerm_resource_group.Rg1]
     name                     = "fan1storage"
